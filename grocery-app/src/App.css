@@ -1,0 +1,268 @@
+/* App container */
+.App {
+  max-width: 720px;
+  margin: auto;
+  padding: 1.5rem 1rem;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background: #f9fafb; /* very light gray */
+  color: #222;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+
+/* Heading */
+h1 {
+  text-align: center;
+  color: #2c3e50; /* navy-ish */
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+/* Total amount */
+.total {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #27ae60; /* fresh green */
+  margin-bottom: 2.5rem;
+  text-align: center;
+  user-select: none;
+}
+
+/* Group container */
+.group-section {
+  margin-bottom: 40px;
+  border: 1px solid #d1d8e0;
+  border-radius: 10px;
+  padding: 20px 15px;
+  background: white;
+  box-shadow: 0 4px 8px rgba(39, 174, 96, 0.1);
+}
+
+/* Group title */
+.group-title {
+  margin-bottom: 12px;
+  border-bottom: 3px solid #27ae60;
+  padding-bottom: 6px;
+}
+
+.group-title h2 {
+  color: #27ae60;
+  margin: 0;
+  font-size: 1.6rem;
+  letter-spacing: 1.1px;
+  font-weight: 700;
+}
+
+.group-title .subtitle {
+  margin: 0;
+  color: #7f8c8d;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 0.95rem;
+  user-select: none;
+}
+
+/* Table header & rows */
+.table-header,
+.table-row {
+  display: flex;
+  align-items: center;
+  padding: 10px 10px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+.table-header {
+  background-color: #ecf0f1;
+  color: #2c3e50;
+  font-weight: 700;
+  user-select: none;
+}
+
+.table-row {
+  background-color: #ffffff;
+  color: #2c3e50;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  transition: background-color 0.15s ease;
+}
+
+.table-row:hover {
+  background-color: #e9f7ef;
+}
+
+/* Columns */
+.col {
+  padding: 0 8px;
+  word-break: break-word;
+}
+
+.col.code {
+  flex: 1 0 90px;
+  font-weight: 600;
+  color: #34495e;
+}
+
+.col.name {
+  flex: 3 1 220px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.col.rate,
+.col.discount,
+.col.final-price {
+  flex: 1 0 90px;
+  text-align: right;
+  font-weight: 600;
+  color: #27ae60;
+}
+
+.col.discount {
+  color: #e74c3c; /* red for discounts */
+}
+
+.col.qty {
+  flex: 1 0 70px;
+  text-align: center;
+}
+
+/* Quantity input */
+input[type='number'] {
+  width: 60px;
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1.5px solid #bdc3c7;
+  background-color: #fff;
+  color: #2c3e50;
+  font-weight: 600;
+  text-align: center;
+  transition: border-color 0.2s ease;
+  font-size: 0.95rem;
+}
+
+input[type='number']:focus {
+  outline: none;
+  border-color: #27ae60;
+  box-shadow: 0 0 6px #27ae60aa;
+}
+
+/* Checkout button */
+button {
+  margin-top: 35px;
+  padding: 14px 28px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: white;
+  background-color: #27ae60;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(39, 174, 96, 0.5);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  align-self: center;
+  min-width: 220px;
+  user-select: none;
+}
+
+button:hover {
+  background-color: #219150;
+  box-shadow: 0 8px 16px rgba(33, 145, 80, 0.8);
+}
+
+/* Responsive adjustments */
+@media (max-width: 720px) {
+  .App {
+    padding: 1rem;
+  }
+
+  .table-header,
+  .table-row {
+    flex-wrap: wrap;
+    padding: 8px 6px;
+  }
+
+  .col {
+    flex: 1 0 45%;
+    margin-bottom: 6px;
+    text-align: left !important;
+  }
+
+  .col.rate,
+  .col.discount,
+  .col.final-price,
+  .col.qty {
+    flex: 1 0 45%;
+    text-align: left !important;
+  }
+
+  input[type='number'] {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  button {
+    width: 100%;
+    max-width: 100%;
+  }
+  /* Header container */
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+/* Diwali image */
+.header-image {
+  width: 70px;
+  height: auto;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+/* Header text container */
+.header-text h1 {
+  font-size: 1.8rem;
+  color: #d35400; /* warm orange */
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+  user-select: none;
+}
+
+.header-text p {
+  margin: 4px 0 0 0;
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #7f8c8d;
+  user-select: none;
+}
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+  .app-header {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .header-image {
+    width: 55px;
+  }
+
+  .header-text h1 {
+    font-size: 1.4rem;
+  }
+
+  .header-text p {
+    font-size: 1rem;
+  }
+}
+}

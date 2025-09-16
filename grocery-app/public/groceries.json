@@ -1,0 +1,64 @@
+{
+    "one sound crackers": [
+        {
+            "Product Code": "1",
+            "Product Name": "2 3/4 kuruvi(5pcs)",
+            "Content": "1 packet",
+            "Rate / Qty": "40",
+            "Discount": "32",
+            "Final Rate": "8",
+            "Quantity": "",
+            "Amount": ""
+        },
+        {
+            "Product Code": "2",
+            "Product Name": "31/2Lakshmi(5pcs)",
+            "Content": "1Pkt",
+            "Rate / Qty": "60",
+            "Discount": "48",
+            "Final Rate": "12",
+            "Quantity": "",
+            "Amount": ""
+        },
+        {
+            "Product Code": "3",
+            "Product Name": "4lakshmi(5pcs)",
+            "Content": "1Pkt",
+            "Rate / Qty": "85",
+            "Discount": "68",
+            "Final Rate": "17",
+            "Quantity": "",
+            "Amount": ""
+        },
+        {
+            "Product Code": "5",
+            "Product Name": "2 sound crackers(5pcs)",
+            "Content": "1Pkt",
+            "Rate / Qty": "150",
+            "Discount": "120",
+            "Final Rate": "30",
+            "Quantity": "",
+            "Amount": ""
+        },
+        {
+            "Product Code": "6",
+            "Product Name": "4 Gold lakshmi Dlx(5pcs)",
+            "Content": "1Pkt",
+            "Rate / Qty": "150",
+            "Discount": "120",
+            "Final Rate": "30",
+            "Quantity": "",
+            "Amount": ""
+        },
+        {
+            "Product Code": "7",
+            "Product Name": "5\" vikram deluxe(5pcs)",
+            "Content": "1pkt",
+            "Rate / Qty": "225",
+            "Discount": "180",
+            "Final Rate": "45",
+            "Quantity": "",
+            "Amount": ""
+        }
+    ]
+}
