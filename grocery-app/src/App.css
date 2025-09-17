@@ -1,10 +1,10 @@
 /* App container */
 .App {
-  max-width: 720px;
+  max-width: 100%;
   margin: auto;
   padding: 1.5rem 1rem;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  background: #f9fafb; /* very light gray */
+  background: #f9fafb;
   color: #222;
   min-height: 100vh;
   display: flex;
@@ -16,7 +16,7 @@
 /* Heading */
 h1 {
   text-align: center;
-  color: #2c3e50; /* navy-ish */
+  color: #2c3e50;
   margin-bottom: 1.5rem;
   font-weight: 700;
   letter-spacing: 1.5px;
@@ -26,7 +26,7 @@ h1 {
 .total {
   font-size: 1.8rem;
   font-weight: 700;
-  color: #27ae60; /* fresh green */
+  color: #27ae60;
   margin-bottom: 2.5rem;
   text-align: center;
   user-select: none;
@@ -50,9 +50,9 @@ h1 {
 }
 
 .group-title h2 {
-  color: #27ae60;
+  color: #d20e48;
   margin: 0;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   letter-spacing: 1.1px;
   font-weight: 700;
 }
@@ -87,7 +87,7 @@ h1 {
 .table-row {
   background-color: #ffffff;
   color: #2c3e50;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
   transition: background-color 0.15s ease;
 }
 
@@ -102,7 +102,7 @@ h1 {
 }
 
 .col.code {
-  flex: 1 0 90px;
+  flex: 1 1 90px;
   font-weight: 600;
   color: #34495e;
 }
@@ -116,18 +116,18 @@ h1 {
 .col.rate,
 .col.discount,
 .col.final-price {
-  flex: 1 0 90px;
+  flex: 1 1 90px;
   text-align: right;
   font-weight: 600;
   color: #27ae60;
 }
 
 .col.discount {
-  color: #e74c3c; /* red for discounts */
+  color: #e74c3c;
 }
 
 .col.qty {
-  flex: 1 0 70px;
+  flex: 1 1 70px;
   text-align: center;
 }
 
@@ -174,42 +174,65 @@ button:hover {
   box-shadow: 0 8px 16px rgba(33, 145, 80, 0.8);
 }
 
-/* Responsive adjustments */
+/* Responsive Adjustments */
 @media (max-width: 720px) {
-  .App {
-    padding: 1rem;
-  }
-
+  /* Scale down font size slightly */
   .table-header,
   .table-row {
-    flex-wrap: wrap;
-    padding: 8px 6px;
+    font-size: 0.9rem;  /* Slightly smaller font size */
+    padding: 8px 6px;  /* Reduce padding */
   }
 
+  /* Reduce column width */
   .col {
-    flex: 1 0 45%;
+    flex: 1 1 80px;  /* Reduce the width of columns */
     margin-bottom: 6px;
-    text-align: left !important;
   }
 
   .col.rate,
   .col.discount,
   .col.final-price,
   .col.qty {
-    flex: 1 0 45%;
-    text-align: left !important;
+    flex: 1 1 80px;  /* Reduce width of these columns */
+    text-align: left; /* Align text left for better readability */
   }
 
-  input[type='number'] {
-    width: 100%;
+  input[type='number'],
+  button {
+    width: 100%;  /* Make input and button span the full width */
     max-width: 100%;
   }
+}
 
+@media (max-width: 480px) {
+  /* Further reduce font size for very small screens */
+  .table-header,
+  .table-row {
+    font-size: 0.75rem;  /* Further reduce font size */
+    padding: 6px 4px;  /* Further reduce padding */
+  }
+
+  /* Make columns even smaller */
+  .col {
+    flex: 1 1 60px;  /* Make columns narrower */
+    margin-bottom: 4px;
+  }
+
+  .col.rate,
+  .col.discount,
+  .col.final-price,
+  .col.qty {
+    flex: 1 1 60px;  /* Further decrease column width */
+  }
+
+  input[type='number'],
   button {
     width: 100%;
     max-width: 100%;
   }
-  /* Header container */
+}
+
+/* App header container */
 .app-header {
   display: flex;
   align-items: center;
@@ -230,12 +253,11 @@ button:hover {
 
 /* Header text container */
 .header-text h1 {
-  font-size: 1.8rem;
-  color: #d35400; /* warm orange */
+  font-size: 1.6rem;
+  color: #d35400;
   margin: 0;
   font-weight: 700;
   letter-spacing: 1.1px;
-  user-select: none;
 }
 
 .header-text p {
@@ -247,10 +269,10 @@ button:hover {
 }
 
 /* Responsive tweaks */
-@media (max-width: 480px) {
+@media (max-width: 720px) {
   .app-header {
     flex-direction: column;
-    gap: 8px;
+    gap: 10px;
   }
 
   .header-image {
@@ -265,4 +287,26 @@ button:hover {
     font-size: 1rem;
   }
 }
+
+@media (max-width: 480px) {
+  .app-header {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .header-image {
+    width: 50px;
+  }
+
+  .header-text h1 {
+    font-size: 1.3rem;
+  }
+
+  .header-text p {
+    font-size: 0.95rem;
+  }
+
+  .total {
+    font-size: 1.6rem;
+  }
 }
