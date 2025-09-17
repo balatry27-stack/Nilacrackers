@@ -806,8 +806,8 @@
             "Product Code": "50",
             "Product Name": "Bada Peacock 5in1",
             "Content": "1Box",
-            "Rate / Qty": "1,500.00",
-            "Discount": "1,200.00",
+            "Rate / Qty": "1500.00",
+            "Discount": "1200.00",
             "Final Rate": "300",
             "Quantity": "",
             "Amount": ""
@@ -1215,20 +1215,20 @@
         {
             "Product Code": "73A",
             "Product Name": "5\"fancy Pinkout(2pcs)A1 QUALITY Vanitha brand",
-            "Content": "        1box",
+            "Content": " 1box",
             "Rate / Qty": "7500",
             "Discount": "6000",
-            "Final Rate": "1,500.00",
+            "Final Rate": "1500.00",
             "Quantity": "",
             "Amount": ""
         },
         {
             "Product Code": "73B",
             "Product Name": "5\"fancy Redzone(2pcs)A1 QUALITY Vanitha brand ",
-            "Content": "         1box",
+            "Content": "1box",
             "Rate / Qty": "7500",
             "Discount": "6000",
-            "Final Rate": "1,500.00",
+            "Final Rate": "1500.00",
             "Quantity": "",
             "Amount": ""
         },
@@ -1238,7 +1238,7 @@
             "Content": "1box",
             "Rate / Qty": "5500",
             "Discount": "4400",
-            "Final Rate": "1,100.00",
+            "Final Rate": "1100.00",
             "Quantity": "",
             "Amount": ""
         }
@@ -1352,7 +1352,7 @@
             "Content": "1Box",
             "Rate / Qty": "8000",
             "Discount": "6400",
-            "Final Rate": "1,600.00",
+            "Final Rate": "1600.00",
             "Quantity": "",
             "Amount": ""
         },
@@ -1362,7 +1362,7 @@
             "Content": "1Box",
             "Rate / Qty": "15000",
             "Discount": "12000",
-            "Final Rate": "3,000.00",
+            "Final Rate": "3000.00",
             "Quantity": "",
             "Amount": ""
         },
@@ -1392,7 +1392,7 @@
             "Content": "1box",
             "Rate / Qty": "5000",
             "Discount": "4000",
-            "Final Rate": "1,000.00",
+            "Final Rate": "1000.00",
             "Quantity": "",
             "Amount": ""
         },
@@ -1402,7 +1402,7 @@
             "Content": "1box",
             "Rate / Qty": "10000",
             "Discount": "8000",
-            "Final Rate": "2,000.00",
+            "Final Rate": "2000.00",
             "Quantity": "",
             "Amount": ""
         },
@@ -1412,7 +1412,7 @@
             "Content": "1box",
             "Rate / Qty": "19000",
             "Discount": "15200",
-            "Final Rate": "3,800.00",
+            "Final Rate": "3800.00",
             "Quantity": "",
             "Amount": ""
         }
