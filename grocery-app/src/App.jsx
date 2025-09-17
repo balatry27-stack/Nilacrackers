@@ -55,7 +55,7 @@ function App() {
   // Set the title of the document and bold it
   doc.setFontSize(18);
   doc.setFont('times', 'bold');  // Use `times` font to ensure Rs.  symbol works
-  doc.text('Final List', marginLeft, y);
+  doc.text('Checkout List', marginLeft, y);
   y += 15;
 
   // Display the total amount in a smaller size
