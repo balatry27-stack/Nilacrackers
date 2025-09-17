@@ -41,6 +41,16 @@ function App() {
   };
 
  const handleCheckout = () => {
+   // Prompt for the user's name
+    const name = prompt("Please enter your name:");
+
+    // If the user doesn't provide a name, return
+    if (!name) {
+      alert("You must enter your name to proceed!");
+      return;
+    }
+
+    
   const doc = new jsPDF();
   let y = 10;
   const marginLeft = 10;
@@ -55,7 +65,7 @@ function App() {
   // Set the title of the document and bold it
   doc.setFontSize(18);
   doc.setFont('times', 'bold');  // Use `times` font to ensure Rs.  symbol works
-  doc.text('Checkout List', marginLeft, y);
+  doc.text(`${name}_Check List`, marginLeft, y); // Prepend user's name
   y += 15;
 
   // Display the total amount in a smaller size
