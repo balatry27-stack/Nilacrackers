@@ -167,6 +167,11 @@ body {
   text-align: center;
   font-size: 0.8rem;
   margin-top: 2px;
+  background-color: #fff !important;   /* Always white */
+  color: #000 !important;  /* Always black text */
+  outline: none;
+  -webkit-appearance: none;  /* Removes iOS autofill styles */
+
 }
 
 /* Checkout Button */
@@ -272,7 +277,11 @@ body {
   }
 
   .thumbnail { width: 50px; height: 50px; }
-  .product-card input { width: 40px; font-size: 0.7rem; }
+  .product-card input { width: 40px; font-size: 0.7rem; 
+    background-color: #fff !important;   /* Always white */
+    color: #000 !important;  /* Always black text */
+    outline: none;
+    -webkit-appearance: none;}
 }
 
 
