@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { jsPDF } from "jspdf";
 import "./App.css";
 
@@ -9,6 +9,8 @@ function App() {
   const [expandedGroup, setExpandedGroup] = useState(null); // only one group expanded
   const [confirmPopup, setConfirmPopup] = useState(false);
   const [confirmData, setConfirmData] = useState([]);
+
+  const groupRefs = useRef({}); // refs for each group
 
   useEffect(() => {
     fetch("/groceries.json")
@@ -46,7 +48,16 @@ function App() {
   };
 
   const toggleGroup = (group) => {
-    setExpandedGroup(prev => (prev === group ? null : group)); // only one open
+    const isExpanding = expandedGroup !== group;
+    setExpandedGroup(isExpanding ? group : null);
+
+    // Scroll the group to top if expanding
+    if (isExpanding && groupRefs.current[group]) {
+      groupRefs.current[group].scrollIntoView({
+        behavior: "smooth",
+        block: "start", // top of the group aligns with viewport top
+      });
+    }
   };
 
   const handleCheckout = () => {
@@ -94,7 +105,7 @@ function App() {
     doc.setFontSize(14);
     doc.setFont("times", "normal");
     doc.text(`Total: Rs. ${totalAmount}`, marginLeft, y);
-    y += 10 + 5;
+    y += 15;
 
     // Table headers
     doc.setFontSize(12);
@@ -147,9 +158,6 @@ function App() {
         <div className="header-text">
           <h1>🎉 Diwali Sale is Open! 🎉</h1>
           <p>Wishing You a Happy & Prosperous Diwali ✨</p>
-          {/* <p className="contact-number">
-            📞 For Queries & Bulk Orders: <strong>+91 9677967124</strong>
-          </p> */}
         </div>
       </header>
 
@@ -158,7 +166,11 @@ function App() {
       </div>
 
       {Object.entries(data).map(([group, items]) => (
-        <div key={group} className="group-section">
+        <div
+          key={group}
+          className="group-section"
+          ref={(el) => (groupRefs.current[group] = el)}
+        >
           <div className="group-title" onClick={() => toggleGroup(group)}>
             <span>{group}</span>
             <span>{expandedGroup === group ? "-" : "+"}</span>
@@ -254,14 +266,23 @@ function App() {
               className="checkout-btn"
               onClick={() => {
                 setConfirmPopup(false);
-                const fileName = prompt("Enter file name for your PDF:", "Final_List");
-                if (!fileName) return; // cancel if empty
+                const fileName = prompt(
+                  "Enter file name for your PDF:",
+                  "Final_List"
+                );
+                if (!fileName) return;
                 generatePDF(confirmData, fileName);
               }}
             >
               Confirm & Save PDF
-              <p style={{ marginTop: "10px", fontStyle: "italic", color: "#333" }}>
-                Download your PDF and share it easily via WhatsApp! 📲
+              <p
+                style={{
+                  marginTop: "10px",
+                  fontStyle: "italic",
+                  color: "#333",
+                }}
+              >
+                Download your PDF and share it easily via WhatsApp! 📲 +919677967124
               </p>
             </button>
           </div>

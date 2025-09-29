@@ -282,6 +282,10 @@ body {
     color: #000 !important;  /* Always black text */
     outline: none;
     -webkit-appearance: none;}
+
+    .confirm-item {
+      color: #0a118b;
+    }
 }
 
 
