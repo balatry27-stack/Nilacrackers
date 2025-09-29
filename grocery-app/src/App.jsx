@@ -196,7 +196,7 @@ function App() {
                     )}
 
                     <div className="product-info">
-                      <h3>{item["Product Name"]}</h3>
+                      <h3>{item["Product Code"]}. {item["Product Name"]}</h3>
                       <div className="rate-container">
                         <span className="original-rate">
                           Rs. {item["Rate / Qty"]}
@@ -267,8 +267,8 @@ function App() {
               onClick={() => {
                 setConfirmPopup(false);
                 const fileName = prompt(
-                  "Enter file name for your PDF:",
-                  "Final_List"
+                  "Enter your name:",
+                  ""
                 );
                 if (!fileName) return;
                 generatePDF(confirmData, fileName);
